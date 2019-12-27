@@ -11,8 +11,8 @@ function onOpen() {
           .addItem('Send All Woodlands Advancement', 'SendAll')
           .addItem('Create Advancement Summary', 'createAdvancementReport'))
       .addSeparator()
-      .addSubMenu(ui.createMenu('Coming Soon')
-          .addItem('Get Patrol List', 'menuItem2'))
+      .addSubMenu(ui.createMenu('Committee')
+          .addItem('Send Dues Reminder', 'duesReminder'))
       .addToUi(); 
 }
 
