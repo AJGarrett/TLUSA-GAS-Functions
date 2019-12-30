@@ -5,7 +5,6 @@
     <script>
     window.writeData = function() {
     var formObj = document.getElementById('myForm');
-    alert(formObj);
     google.script.run.sendDueEmails(formObj); 
     google.script.host.close();
     };

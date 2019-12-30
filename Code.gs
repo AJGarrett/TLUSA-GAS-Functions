@@ -3,7 +3,7 @@ function onOpen() {
   // Or DocumentApp or FormApp.
   ui.createMenu('Trail Life Menu')
       .addSubMenu(ui.createMenu('Woodlands')
-          .addItem('Send Leader Reminders', 'woodlandReminder')
+          .addItem('Send Leader Reminders', 'TeachingReminder')
           .addItem('Record Meeting Attendance', 'recordAttendance'))
       .addSeparator()
       .addSubMenu(ui.createMenu('Advancement')

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+    window.writeData = function() {
+    var formObj = document.getElementById('myForm');
+    google.script.run.woodlandReminder(formObj); 
+    google.script.host.close();
+    };
+    </script>
+  </head>
+  <body>
+    <h4>Send Teaching Reminder</h4>
+    <p>Send Reminder to all leaders scheduled to teach on specified date.</p>
+    <form id="myForm">
+    <p>Date</p>
+    <input type="date" name="txtDate" style="width: 90%" />
+    <p>Subject</p>
+    <input type="text" name="txtSub" value="Teaching Reminder for the {patrol} patrol on {date}" style="width: 90%" />
+    
+    <p>Email</p>
+    <textarea name="txtBody" rows="10"  style="width: 90%">Hey Guys
+
+This week's lesson is on {lesson}. Here is the link to the {plan} and {help} documents.
+
+Let me know if you need anything. Also, please ensure the rooms are returned to order when finished.
+
+Thanks!
+
+Matt</textarea>
+    <p>Send Test (only to yourself)</p>
+    <input type="checkbox" name="txtAdmin" />
+    <br />
+    <input type="button" value="Send Reminder" onclick="writeData()" />
+    </form>
+    </body>
+</html>
+
+
