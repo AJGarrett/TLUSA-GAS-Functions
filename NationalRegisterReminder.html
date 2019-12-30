@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script>
+    window.writeData = function() {
+    var formObj = document.getElementById('myForm');
+    google.script.run.sendRegistrationReminder(formObj); 
+    google.script.host.close();
+    };
+    </script>
+  </head>
+  <body>
+    <h4>Send Registration Reminder</h4>
+    <p>Enter a message below to send a reminder to any family that needs to complete their national registration.</p>
+    <form id="myForm">
+    <p>Subject</p>
+    <input type="text" name="txtSub" value="Troop OH-1202 - Troop Dues Reminder" style="width: 90%" />
+    
+    <p>Email</p>
+    <textarea name="txtBody" rows="10"  style="width: 90%"></textarea>
+    
+    <input type="button" value="Send Reminder" onclick="writeData()" />
+    </form>
+    </body>
+</html>
+
+

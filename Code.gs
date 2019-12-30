@@ -12,7 +12,8 @@ function onOpen() {
           .addItem('Create Advancement Summary', 'createAdvancementReport'))
       .addSeparator()
       .addSubMenu(ui.createMenu('Committee')
-          .addItem('Send Dues Reminder', 'duesReminder'))
+          .addItem('Send Dues Reminder', 'duesReminder')
+          .addItem('Send National Registration Reminder', 'NationalRegisterReminderBar'))
       .addToUi(); 
 }
 
